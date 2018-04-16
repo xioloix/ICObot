@@ -31,7 +31,7 @@ cd ~/my_project
 * Создать виртуальное окружение
 ```
 #!bash
-virtualenv env
+virtualenv venv
 ```
 * Создать каталог исходников
 ```
@@ -55,6 +55,11 @@ git clone https://github.com/ethereumcoder/ICObot.git ./
 ```
 #!bash
 pip install -r requirements.txt
+```
+* Активировать виртуальное окружение
+```
+#!bash
+source ../venv/bin/activate
 ```
 * Применить миграции
 ```
