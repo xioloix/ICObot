@@ -3,7 +3,7 @@
 ---
 
 Это Телеграм Бот пример токен сейла в Телеграме.
-Подключайся к t.me/CryptoMafiaMarket
+Подключайся к [https://t.me/CryptoMafiaMarket](CryptoMafiaMarket)
  
 ---
 
