@@ -39,240 +39,26 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 ---
-
-[TOC]
+# Понятия и сущности
 
 ## __Пользователь__
 
-`User`
+`ProfileTelegram`
 
-Таблица `users`
+Таблица `mytelegram_profiletelegram`
 
 Базовая учетная запись
 
 |Свойство|Название|Описание|
 |---|---|---|
 |id|`id`|PK, intger|
-|usernmae|`имя пользователя`|string|
-|email|`emial`|string|
-|password|`пароль`|string|
-|confirmation_code|`код подтверждения`|string|
-|remember_token|`remember_token`|string|
-|confirmed|`одобренный`|bool|
-|created_at|`создан`|timestamp|
-|updated_at|`обновлен`|timestamp|
-
-## __Роль__
-
-`Role`
-
-Таблица `roles`
-
-Роли пользователей
-
-|Свойство|Название|Описание|
-|---|---|---|
-|name|`название`|string|
-|created_at|`создана`|timestamp|
-|updated_at|`обновлена`|timestamp|
-
-## __Категория товара__
-
-`ProductCategory`
-
-Таблица `product_categories`
-
-|Свойство|Название|Описание|
-|---|---|---|
-|id|`id`|PK, integer|
-|parent_id|`parent_id`|FK, integer|
-|position|`позиция в меню`|integer|
-|title|`заголовок`|string|
-|slug|`адрес`|string|
-|keywords|`ключевые слова`|string|
-|description|`описание`|text|
-|created_at|`создана`|timestamp|
-|updated_at|`обновлена`|timestamp|
-
-## __Бренд__
-
-`Brand`
-
-Таблица `brands`
-
-|Свойство|Название|Описание|
-|---|---|---|
-|id|`id`|PK, integer|
-|title|`заголовок`|string|
-|description|`описание`|text|
-|created_at|`создан`|timestamp|
-|updated_at|`обновлен`|timestamp|
-
-## __Класс__
-
-`ProductClass`
-
-Таблица `product_classes`
-
-|Свойство|Название|Описание|
-|---|---|---|
-|id|`id`|PK, integer|
-|title|`заголовок`|string|
-|description|`описание`|text|
-|created_at|`создан`|timestamp|
-|updated_at|`обновлен`|timestamp|
-
-## __Тип__
-
-`ProductType`
-
-Таблица `product_types`
-
-|Свойство|Название|Описание|
-|---|---|---|
-|id|`id`|PK, integer|
-|title|`заголовок`|string|
-|description|`описание`|text|
-|created_at|`создан`|timestamp|
-|updated_at|`обновлен`|timestamp|
-
-## __Коллекция__
-
-`ProductCollection`
-
-Таблица `product_collections`
-
-|Свойство|Название|Описание|
-|---|---|---|
-|id|`id`|PK, integer|
-|product_category_id|`product_category_id`|FK, integer|
-|brand_id|`brand_id`|FK, integer|
-|product_class_id|`class_id`|FK, integer|
-|product_type_id|`type_id`|FK, integer|
-|title|`заголовок`|string|
-|slug|`адрес`|string|
-|keywords|`ключевые слова`|string|
-|description|`описание`|text|
-|measure|`единица измерения`|string|
-|width|`ширина`|integer|
-|height|`высота`|integer|
-|lgth|`длина`|integer|
-|quantity_in_package|`количество в упаковке`|integer|
-|life|`срок службы`|integer|
-|image|`изображение`|string|
-|image_alt|`alt для изображения`|string|
-|image_title|`title для изображения`|string|
-|home|`выводить на главную`|bool|
-|created_at|`создана`|timestamp|
-|updated_at|`обновлена`|timestamp|
-
-## __Товар__
-
-`Product`
-
-Таблица `products`
-
-|Свойство|Название|Описание|
-|---|---|---|
-|id|`id`|PK, integer|
-|product_category_id|`product_category_id`|FK, integer|
-|product_collection_id|`product_collection_id`|FK, integer|
-|brand_id|`brand_id`|FK, integer|
-|product_class_id|`class_id`|FK, integer|
-|product_type_id|`type_id`|FK, integer|
-|title|`заголовок`|string|
-|slug|`адрес`|string|
-|keywords|`ключевые слова`|string|
-|description|`описание`|text|
-|measure|`единица измерения`|string|
-|width|`ширина`|integer|
-|height|`высота`|integer|
-|lgth|`длина`|integer|
-|quantity_in_package|`количество в упаковке`|integer|
-|life|`срок службы`|integer|
-|color|`цвет`|string|
-|material|`материал`|string|
-|image|`изображение`|string|
-|image_alt|`alt для изображения`|string|
-|image_title|`title для изображения`|string|
-|created_at|`создан`|timestamp|
-|updated_at|`обновлен`|timestamp|
-
-## __Новость__
-
-`News`
-
-Таблица `news`
-
-|Свойство|Название|Описание|
-|---|---|---|
-|id|`id`|PK, integer|
-|title|`заголовок`|string|
-|slug|`адрес`|string|
-|keywords|`ключевые слова`|string|
-|description|`описание`|text|
-|content|`контент`|string|
-|image|`картинка`|string|
-|image_alt|`alt для изображения`|string|
-|image_title|`title для изображения`|string|
-|state|`состояние`|boolean|
-|created_at|`создана`|timestamp|
-|updated_at|`обновлена`|timestamp|
-
-## __Статья__
-
-`Article`
-
-Таблица `articles`
-
-|Свойство|Название|Описание|
-|---|---|---|
-|id|`id`|PK, integer|
-|title|`заголовок`|string|
-|slug|`адрес`|string|
-|keywords|`ключевые слова`|string|
-|description|`описание`|text|
-|content|`контент`|string|
-|image|`картинка`|string|
-|image_alt|`alt для изображения`|string|
-|image_title|`title для изображения`|string|
-|state|`состояние`|boolean|
-|created_at|`создана`|timestamp|
-|updated_at|`обновлена`|timestamp|
-
-## __Вопрос-ответ__
-
-`faq`
-
-Таблица `faqs`
-
-|Свойство|Название|Описание|
-|---|---|---|
-|id|`id`|PK, integer|
-|name_author|`Имя автора вопроса`|string|
-|answer|`ответ`|text|
-|question|`Вопрос`|text|
-|state|`состояние`|boolean|
-|created_at|`создан`|timestamp|
-|updated_at|`обновлен`|timestamp|
-
-## __Статичная страница__
-
-`page`
-
-Таблица `pages`
-
-|Свойство|Название|Описание|
-|---|---|---|
-|id|`id`|PK, integer|
-|title|`заголовок`|string|
-|keywords|`ключевые слова`|string|
-|slug|`адрес`|string|
-|description|`описание`|text|
-|content|`контент`|string|
-|image|`картинка`|string|
-|image_alt|`alt для изображения`|string|
-|image_title|`title для изображения`|string|
-|state|`состояние`|boolean|
-|created_at|`создана`|timestamp|
-|updated_at|`обновлена`|timestamp|
+|parent_id|`id`|FK self, intger|
+|telegram_user_id|`АйДи юзера Телеграм`|intger|
+|usernmae|`имя пользователя`|varchar255|
+|first_name|`имя`|varchar255|
+|last_name|`фамилия`|varchar255|
+|address|`эфереум адрес`|varchar255|
+|locale|`язык`|varchar255|
+|ban|`забанен?`|bool|
+|created|`создан`|timestamp|
+|updated|`обновлен`|timestamp|
