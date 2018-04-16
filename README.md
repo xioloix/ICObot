@@ -52,7 +52,7 @@ python manage.py migrate
 |Свойство|Название|Описание|
 |---|---|---|
 |id|`id`|PK, intger|
-|parent_id|`id`|FK self, intger|
+|parent_id|`пригласитель`|FK self, intger|
 |telegram_user_id|`АйДи юзера Телеграм`|intger|
 |usernmae|`имя пользователя`|varchar255|
 |first_name|`имя`|varchar255|
