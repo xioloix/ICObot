@@ -12,7 +12,7 @@
 
 ## Системные требования
 
-python 2.7, MySQL, Apache, Nginx, pip, virtualenv, nodejs, npm, MongoDB.
+python 2.7, MySQL, Apache, Nginx, pip, virtualenv, nodejs, npm, MongoDB, Gunicorn, Supervisor.
 Установите все зависимости.
 
 ---
