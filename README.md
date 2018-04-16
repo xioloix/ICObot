@@ -12,7 +12,8 @@
 
 ## Системные требования
 
-python 2.7, MySQL, Apache, Nginx, pip, nodejs, npm.
+python 2.7, MySQL, Apache, Nginx, pip, virtualenv, nodejs, npm, MongoDB.
+Установите все зависимости.
 
 ---
 
@@ -26,6 +27,21 @@ mkdir ~/my_project
 ```
 #!bash
 cd ~/my_project 
+```
+* Создать виртуальное окружение
+```
+#!bash
+virtualenv env
+```
+* Создать каталог исходников
+```
+#!bash
+mkdir src
+```
+* Зайти в каталог исходников
+```
+#!bash
+cd src 
 ```
 * Клонировать репозиторий
 ```
